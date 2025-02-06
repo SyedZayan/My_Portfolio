@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #1f242d;
+  color: #fff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+  animation: slideTop 0.5s ease forwards;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.navbar a:hover {
+  color: cadetblue;
+  font-size: 15px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 120px 10% 0;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+
+.home-content h3 span {
+  color: cadetblue;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+}
+
+.home-content p {
+  font-size: 16px;
+}
+
+.home-img {
+  margin-left: auto;
+}
+
+.home-img img {
+  max-width: 350px;
+  margin-right: -20px;
+  border-radius: 10%;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid cadetblue;
+  border-radius: 50%;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: 0.5s ease;
+  color: cadetblue;
+}
+
+.social-media a:hover {
+  background-color: cadetblue;
+  color: #1f242d;
+  box-shadow: 0 0 20px cadetblue;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: cadetblue;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #1f242d;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover{
+ cursor: pointer;
+ box-shadow: 0 0 10px cadetblue;
+}
+
+@media (max-width: 770px) {
+  .navbar a {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+    margin-top: 10%;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    margin-top: 2%;
+  }
+
+  .navbar {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+
+  
+  .home-img {
+    order: 1;
+    margin: 20px auto 0;
+    position:absolute;
+    top: 14vh;
+    right: 27vw;
+
+  }
+
+  .home-img img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 10%;
+  }
+
+  .home-content p {
+    margin-top: 20px;
+    text-align: center;
+    order: 3;
+    padding: 0 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
